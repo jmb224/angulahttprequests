@@ -30,6 +30,9 @@ export class AppComponent implements OnInit {
     this._postServ.create(postData).subscribe(
       (data) => {
         console.log(data)
+
+        // make another request to update posts
+        this.onFetchPosts()
       },
       (error) => {
         console.error(error)
